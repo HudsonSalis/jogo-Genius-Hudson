@@ -7,20 +7,27 @@ let score = 0;
 //2 - amarelo
 //3 - azul
 
-const blue = document.querySelector('.blue');
-const red = document.querySelector('.red');
-const green = document.querySelector('.green');
-const yellow = document.querySelector('.yellow');
+const um = document.querySelector('.um');
+const dois = document.querySelector('.dois');
+const tres = document.querySelector('.tres');
+const quatro = document.querySelector('.quatro');
+const cinco = document.querySelector('.cinco');
+const seis = document.querySelector('.seis');
+const sete = document.querySelector('.sete');
+const oito = document.querySelector('.oito');
+const nove = document.querySelector('.nove');
 
 //cria ordem aletoria de cores
 let shuffleOrder = () => {
-    let colorOrder = Math.floor(Math.random() * 4);
+    let colorOrder = Math.floor(Math.random() * 8);
     order[order.length] = colorOrder;
     clickedOrder = [];
 
     for(let i in order) {
+        
         let elementColor = createColorElement(order[i]);
         lightColor(elementColor, Number(i) + 1);
+       
     }
 }
 
@@ -71,14 +78,33 @@ let click = (color) => {
 //funcao que retorna a cor
 let createColorElement = (color) => {
     if(color == 0) {
-        return green;
-    } else if(color == 1) {
-        return red;
-    } else if (color == 2) {
-        return yellow;
-    } else if (color == 3) {
-        return blue;
+        return um;
     }
+    else if(color == 1) {
+        return dois;
+    } 
+    else if (color == 2) {
+        return tres;
+    } 
+    else if (color == 3) {
+        return quatro;
+    }
+    else if(color == 4) {
+        return cinco;
+    } 
+    else if (color == 5) {
+        return seis;
+    } 
+    else if (color == 6) {
+        return sete;
+    }
+    else if(color == 7) {
+        return oito;
+    } 
+    else if (color == 8) {
+        return nove;
+    }
+    
 }
 
 //funcao para proximo nivel do jogo
@@ -105,11 +131,10 @@ let gameOver = () => {
         confirmButtonText: 'Sim',
         denyButtonText: `Não`,
       }).then((result) => {
-        /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
             playGame();
         } else if (result.isDenied) {
-            console.log("hoje n")
+            console.log("not today")
         }
       })
  
@@ -117,6 +142,9 @@ let gameOver = () => {
 
 //funcao de inicio do jogo
 let playGame = () => {
+    
+    order = [];
+    clickedOrder = [];
     alert('Bem vindo ao Gênesis! Iniciando novo jogo!');
     setTimeout(() => {
         score = 0;
@@ -126,10 +154,15 @@ let playGame = () => {
 }
 
 //eventos de clique para as cores
-green.onclick = () => click(0);
-red.onclick = () => click(1);
-yellow.onclick = () => click(2);
-blue.onclick = () => click(3);
+um.onclick = () => click(0);
+dois.onclick = () => click(1);
+tres.onclick = () => click(2);
+quatro.onclick = () => click(3);
+cinco.onclick = () => click(4);
+seis.onclick = () => click(5);
+sete.onclick = () => click(6);
+oito.onclick = () => click(7);
+nove.onclick = () => click(8);
 
 
 //inicio do jogo

@@ -16,43 +16,69 @@ body{
 
 .genius{
     display: grid;
-    grid-template-areas: 'green red' 'yellow blue';
+    grid-template-areas: 'um dois tres' 'quatro cinco seis' 'sete oito nove';
     grid-gap: 10px;
-    border: 1px solid white;
-    background-color: white;
-    border-radius: 100%;
-    width: 500px;
-    height: 500px;
+    background-color: transparent;
+    width: 700px;
+    height: 400px;
 
 }
 
-.blue{
-    grid-area:  blue;
+.um{
+    grid-area:  um;
     background-color: rgba(0, 0, 255, 0.767);
-    border-bottom-right-radius: 100% ;
 }
 
-.yellow{
-    grid-area: yellow;
-    background-color: yellow;
-    border-bottom-left-radius: 100%;
+.dois{
+    grid-area:  dois;
+    background-color: rgba(0, 0, 255, 0.767);
 }
 
-.red{
-    grid-area: red;
-    background-color: rgb(255, 94, 0);
-    border-top-right-radius: 100%;
+.tres{
+    grid-area:  tres;
+    background-color: rgba(0, 0, 255, 0.767);
 }
-.green{
-    grid-area: green;
-    background-color: green;
-    border-top-left-radius: 100%;
+
+.quatro{
+    grid-area:  quatro;
+    background-color: rgba(0, 0, 255, 0.767);
 }
+
+.cinco{
+    grid-area:  cinco;
+    background-color: rgba(0, 0, 255, 0.767);
+}
+
+.seis{
+    grid-area:  seis;
+    background-color: rgba(0, 0, 255, 0.767);
+}
+
+.sete{
+    grid-area:  sete;
+    background-color: rgba(0, 0, 255, 0.767);
+}
+
+.oito{
+    grid-area:  oito;
+    background-color: rgba(0, 0, 255, 0.767);
+}
+
+.nove{
+    grid-area:  nove;
+    background-color: rgba(0, 0, 255, 0.767);
+}
+
+
 
 .selected {
-    background-color: rgba(112, 10, 99, 0.603);
+    background-color: red;
 }
 
 .selected2 {
     background-color: rgba(112, 10, 99, 0.603);
+}
+
+.botao{
+    border-radius: 2%;
 }
